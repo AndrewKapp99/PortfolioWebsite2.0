@@ -105,8 +105,11 @@ footer{
 }
 
 .bPreview {
-    margin: 1em;
+    margin: 1em auto;
     font-size: 20px;
+    background: white;
+    width: 65%;
+    justify-self: center;
 }
 
 .blurb {
