@@ -104,6 +104,11 @@ footer{
     margin-bottom: 1em;
 }
 
+.bPreview {
+    margin: 1em;
+    font-size: 20px;
+}
+
 .blurb {
     margin: 2em;
     margin-top: 1em;
