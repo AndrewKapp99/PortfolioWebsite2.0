@@ -1,0 +1,107 @@
+body {
+    border: 1px solid transparent;
+    background:rgb(173, 113, 1);
+    margin: 0px;
+    position: relative;
+}
+header {
+    display:grid;
+    grid-template-columns: 30% 70%;
+    height: 10%;
+    background: rgb(138, 137, 137);
+    border-top: 1px solid;
+}
+footer{
+    position:relative;
+    bottom: 1px;
+    flex-direction: row;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.content {
+    padding: 10px;
+    flex-shrink: 1;
+}
+
+.portItem {
+    align-self: center;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    padding: 1rem;
+    flex-shrink: 1;
+    width: 60%;
+    background:rgb(136, 100, 147);
+    border-radius: 10px;
+}
+
+.nav {
+    justify-content: flex-end;
+    background: rgb(136, 100, 147);
+    height: 10vh;
+}
+
+.page {
+    font-size: 20px;
+    width: 6em;
+    background: rgb(173, 113, 1);
+    margin: 10px 15px;
+    text-align: center;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.externalLink {
+    background-color: aqua;
+    width: 16em;
+    padding: 1em;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+.container a:hover {
+    border-radius: 20px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.profilePic {
+    width: 100%;
+}
+
+.projPic {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.projDescription {
+    margin: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.blurb {
+    margin: 2em;
+    margin-top: 1em;
+    font-size: 20px;
+}
+
+#title {
+    font-size: 30px;
+    align-self: center;
+    justify-self: center;
+}
+
+#active{
+    background: darkcyan;
+    flex-grow: 1.5;
+}
