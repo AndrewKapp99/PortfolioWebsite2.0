@@ -28,14 +28,25 @@ footer{
     flex-shrink: 1;
 }
 
-.portItem {
+.portItem1 {
     align-self: center;
     margin: 10px auto;
     display: grid;
     grid-template-columns: 45% 55%;
     padding: 1rem;
     flex-shrink: 1;
-    width: 60%;
+    width: 75%;
+    background:rgb(136, 100, 147);
+    border-radius: 10px;
+}
+.portItem2 {
+    align-self: center;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    padding: 1rem;
+    flex-shrink: 1;
+    width: 75%;
     background:rgb(136, 100, 147);
     border-radius: 10px;
 }
@@ -76,6 +87,10 @@ footer{
 
 .profilePic {
     width: 100%;
+}
+
+.portfolio {
+    flex-direction: column;
 }
 
 .projPic {
