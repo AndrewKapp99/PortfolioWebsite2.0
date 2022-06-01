@@ -11,10 +11,17 @@ header {
     background: rgb(138, 137, 137);
     border-top: 1px solid;
 }
+
+main {
+    height: 80vh;
+}
+
 footer{
     position:relative;
     bottom: 1px;
     flex-direction: row;
+    height: 10%;
+    margin-bottom: 0px;
 }
 
 .container {
@@ -35,7 +42,7 @@ footer{
     grid-template-columns: 45% 55%;
     padding: 1rem;
     flex-shrink: 1;
-    width: 75%;
+    width: 80%;
     background:rgb(136, 100, 147);
     border-radius: 10px;
 }
@@ -46,7 +53,7 @@ footer{
     grid-template-columns: 55% 45%;
     padding: 1rem;
     flex-shrink: 1;
-    width: 75%;
+    width: 80%;
     background:rgb(136, 100, 147);
     border-radius: 10px;
 }
@@ -55,6 +62,7 @@ footer{
     justify-content: flex-end;
     background: rgb(136, 100, 147);
     height: 10vh;
+    border-bottom-right-radius: 10px;
 }
 
 .page {
@@ -82,11 +90,16 @@ footer{
 .container a:hover {
     border-radius: 20px;
     border: 1px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
     cursor: pointer;
 }
 
 .profilePic {
     width: 100%;
+    border-radius: 30px;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
 }
 
 .portfolio {
@@ -98,10 +111,30 @@ footer{
     border-radius: 5px;
 }
 
-.projDescription {
-    margin: 2em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+.portItem1 .projDescription {
+    margin: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0em;
+    padding: 1em;
+    font-size: 20px;
+    background: ivory;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: 1px solid black;
+}
+
+.portItem2 .projDescription {
+    margin: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-right: 0em;
+    padding: 1em;
+    font-size: 20px;
+    background: ivory;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: 1px solid black;
 }
 
 .bPreview {
@@ -110,6 +143,11 @@ footer{
     background: white;
     width: 65%;
     justify-self: center;
+    height: 10em;
+    padding: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-radius: 20px;
 }
 
 .blurb {
