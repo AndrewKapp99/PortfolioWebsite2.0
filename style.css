@@ -24,6 +24,31 @@ footer{
     margin-bottom: 0px;
 }
 
+figure.content {
+    margin-right: 0px;
+    flex-shrink: 0.5;
+    padding-right: 0;
+}
+
+h4 {
+    font-size: 23px;
+    background: #172A3A;
+    color: #EBEBEB;
+    margin-top: 0em;
+    margin-bottom: 0.5em;
+    width: 30em;
+    align-content: center;
+    text-align: center;
+    border-bottom-right-radius: 20px;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+summary {
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+}
+
 .container {
     display: flex;
     flex-direction: row;
@@ -100,6 +125,7 @@ footer{
     border-radius: 30px;
     border-bottom: 2px solid black;
     border-right: 2px solid black;
+    padding-right: 0;
 }
 
 .portfolio {
@@ -138,22 +164,38 @@ footer{
 }
 
 .bPreview {
-    margin: 1em auto;
-    font-size: 20px;
+    margin: 2em auto;
+    font-size: 21px;
     background: white;
     width: 65%;
     justify-self: center;
     height: 10em;
     padding: 1em;
-    padding-top: 0.5em;
+    padding-left: 0;
+    padding-top: 0em;
     padding-bottom: 0.5em;
     border-radius: 20px;
+    overflow: hidden;
 }
 
 .blurb {
+    margin: 3em;
+    margin-top: 2em;
+    margin-left: 2px;
+    margin-bottom: 4em;
+    font-size: 24px;
+    padding: 4em;
+    padding-top: 0.5em;
+    padding-bottom: 0px;
+    background: ivory;
+    align-self: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.bPreview a {
     margin: 2em;
-    margin-top: 1em;
-    font-size: 20px;
+    align-self: right;
 }
 
 #title {
