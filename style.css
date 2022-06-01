@@ -1,6 +1,6 @@
 body {
     border: 1px solid transparent;
-    background:rgb(173, 113, 1);
+    background:#7c7A7A;
     margin: 0px;
     position: relative;
 }
@@ -13,20 +13,23 @@ header {
 }
 
 main {
-    height: 80vh;
+    height: 80%;
+    margin: 1px;
 }
 
 footer{
-    position:relative;
+    position: relative;
+    bottom: 0;
     bottom: 1px;
     flex-direction: row;
     height: 10%;
+    margin-top: 2px auto;
     margin-bottom: 0px;
 }
 
 figure.content {
     margin-right: 0px;
-    flex-shrink: 0.5;
+    flex-shrink: 0.6;
     padding-right: 0;
 }
 
@@ -85,7 +88,7 @@ summary {
 
 .nav {
     justify-content: flex-end;
-    background: rgb(136, 100, 147);
+    background: #172a3a;
     height: 10vh;
     border-bottom-right-radius: 10px;
 }
@@ -93,7 +96,8 @@ summary {
 .page {
     font-size: 20px;
     width: 6em;
-    background: rgb(173, 113, 1);
+    background: #2a4d14;
+    color: #ebebeb;
     margin: 10px 15px;
     text-align: center;
     border-radius: 5px;
@@ -183,7 +187,7 @@ summary {
     margin-top: 2em;
     margin-left: 2px;
     margin-bottom: 4em;
-    font-size: 24px;
+    font-size: 1.3vw;
     padding: 4em;
     padding-top: 0.5em;
     padding-bottom: 0px;
@@ -205,6 +209,6 @@ summary {
 }
 
 #active{
-    background: darkcyan;
+    background: #540B0E;
     flex-grow: 1.5;
 }
