@@ -215,6 +215,13 @@ summary {
     border-left: 3px solid black;
 }
 
+.blogEntry {
+    display:none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s;
+}
+
 .blurb {
     margin: 3em;
     margin-top: 2em;
