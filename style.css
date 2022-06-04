@@ -242,6 +242,11 @@ summary {
     align-self: right;
 }
 
+#blogContent {
+    height: auto;
+    overflow: hidden;
+}
+
 #title {
     font-size: 30px;
     align-self: center;
