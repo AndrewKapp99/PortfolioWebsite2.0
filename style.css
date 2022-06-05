@@ -27,7 +27,7 @@ footer{
     bottom: 1px;
     flex-direction: row;
     height: 10%;
-    margin-top: 2px auto;
+    margin-top: 3em;
     margin-bottom: 0px;
 }
 
@@ -66,7 +66,7 @@ h4 {
     color: #EBEBEB;
     margin-top: 0em;
     margin-bottom: 0.5em;
-    width: 30em;
+    width: 100;
     align-content: center;
     text-align: center;
     border-bottom-right-radius: 20px;
@@ -74,10 +74,12 @@ h4 {
     padding-bottom: 0.2em;
 }
 
+
 summary {
     margin-left: 1em;
     margin-bottom: 0.5em;
     font-size: 1.6vw;
+    padding-right: 1em;
 }
 
 .container {
@@ -206,10 +208,7 @@ summary {
     background: white;
     width: 65%;
     justify-self: center;
-    padding: 1em;
-    padding-left: 0;
-    padding-top: 0em;
-    padding-bottom: 0.5em;
+    padding: 0;
     border-radius: 20px;
     overflow: hidden;
     border-left: 3px solid black;
@@ -224,14 +223,25 @@ summary {
 .blogTitle button {
     background: #172A3A;
     padding:0;
-    border-radius: 50px;
+    border-radius: 15px;
     color:#ebebeb;
+    font-size: 1.4vw;
+    height: auto;
+    padding: 0;
+    align-self: center;
+    justify-self: center;
+    width:40%;
+    margin-bottom: 0.75em;
 }
 
 .blogEntry {
     overflow: hidden;
     height:0;
     transition: 0.3s;
+}
+
+.blogEntry p {
+    font-size:1.2vw;
 }
 
 .blurb {
