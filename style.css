@@ -215,11 +215,23 @@ summary {
     border-left: 3px solid black;
 }
 
+.blogTitle {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    background: white;
+}
+
+.blogTitle button {
+    background: #172A3A;
+    padding:0;
+    border-radius: 50px;
+    color:#ebebeb;
+}
+
 .blogEntry {
-    display:none;
     overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.3s;
+    height:0;
+    transition: 0.3s;
 }
 
 .blurb {
@@ -240,6 +252,10 @@ summary {
 .bPreview a {
     margin: 2em;
     align-self: right;
+}
+
+.open {
+    height:auto;
 }
 
 #blogContent {
