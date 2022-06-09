@@ -38,6 +38,10 @@ figure.content {
     background:#172A3A transparent 0%;
 }
 
+br {
+    height: 1.5em;
+}
+
 .portItem1 h2 {
     font-size: 2vw;
     text-align: center;
@@ -72,6 +76,12 @@ h4 {
     border-bottom-right-radius: 20px;
     padding-top: 0.2em;
     padding-bottom: 0.2em;
+}
+
+h6 {
+    font-size: 1.3vw;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
 }
 
 
@@ -241,7 +251,19 @@ summary {
 }
 
 .blogEntry p {
-    font-size:1.2vw;
+    font-size:1.25vw;
+}
+
+.inBlog {
+    font-size:1.6vw;
+    text-decoration: underline;
+    background: rgba(160, 160, 160, 0.4);
+    margin-bottom: 0.8em;
+    width: 25em;
+    text-align: center;
+    padding: 0.2em;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 .blurb {
@@ -277,6 +299,8 @@ summary {
     font-size: 30px;
     align-self: center;
     justify-self: center;
+    background: #7c7A7A;
+    margin: 0.5em;
 }
 
 #active{
