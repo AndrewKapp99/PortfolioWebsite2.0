@@ -147,13 +147,18 @@ summary {
 }
 
 .externalLink {
-    background-color: aqua;
-    width: 16em;
-    padding: 1em;
-    text-align: center;
-    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    background:rgba(84, 11, 14, 0.7);
+    width: 22%;
+    margin: 1em;
+    border-radius: 15px;
     transition: 0.3s;
-    margin: 10px;
+}
+.externalLink p {
+    margin-left: 1em;
+    font-size: 1.1vw;
+    color: #ebebeb;
 }
 
 .container a:hover {
@@ -213,7 +218,8 @@ summary {
 
 .bPreview {
     margin: 2em auto;
-    margin-bottom: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
     font-size: 1.6vw;
     background: white;
     width: 65%;
