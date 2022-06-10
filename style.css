@@ -8,7 +8,7 @@ header {
     display:grid;
     grid-template-columns: 30% 70%;
     height: 10%;
-    background: rgb(138, 137, 137);
+    background: #172a3a;
     border-top: 1px solid;
 }
 
@@ -101,6 +101,8 @@ summary {
 .content {
     padding: 10px;
     flex-shrink: 1;
+    margin: auto;
+    justify-self: center;
 }
 
 .portItem1 {
@@ -131,6 +133,7 @@ summary {
     background: #172a3a;
     height: 10vh;
     border-bottom-right-radius: 10px;
+    align-self: center;
 }
 
 .page {
@@ -237,7 +240,7 @@ summary {
 }
 
 .blogTitle button {
-    background: #172A3A;
+    background:#540B0E;
     padding:0;
     border-radius: 15px;
     color:#ebebeb;
@@ -296,6 +299,19 @@ summary {
     height:auto;
 }
 
+.design {
+    width: 70%;
+    background: #ebebeb;
+    align-self: center;
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: 1.2vw;
+    padding: 1.5em;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
 #blogContent {
     height: auto;
     overflow: hidden;
@@ -306,7 +322,13 @@ summary {
     align-self: center;
     justify-self: center;
     background: #7c7A7A;
+    padding: 0.5em;
+    width: 10em;
     margin: 0.5em;
+    text-align: center;
+    border-radius: 10px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 #active{
@@ -314,3 +336,7 @@ summary {
     flex-grow: 1;
 }
 
+#gomezRef {
+    width: 30%;
+    display: inline;
+}
