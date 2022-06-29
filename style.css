@@ -14,11 +14,6 @@ header {
 
 main {
     background-color: #a0a0a0;
-opacity: 1;
-background: linear-gradient(135deg, #5f618955 25%, transparent 25%) -31px 0/ 62px 62px, 
-            linear-gradient(225deg, #5f6189 25%, transparent 25%) -31px 0/ 62px 62px, 
-            linear-gradient(315deg, #5f618955 25%, transparent 25%) 0px 0/ 62px 62px, 
-            linear-gradient(45deg, #5f6189 25%, #a0a0a0 25%) 0px 0/ 62px 62px;
 }
 
 footer{
