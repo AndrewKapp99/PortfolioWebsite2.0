@@ -10,6 +10,9 @@ header {
     height: 10vh;
     background: #172a3a;
     border-top: 1px solid;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 main {
@@ -21,8 +24,7 @@ footer{
     bottom: 0;
     bottom: 1px;
     flex-direction: row;
-    height: 10%;
-    margin-top: 3em;
+    height: auto;
     margin-bottom: 0px;
 }
 
@@ -216,6 +218,7 @@ summary ul {
 
 .blogFlex {
     flex-direction: column;
+    z-index: 1;
 }
 
 .bPreview {
@@ -319,6 +322,7 @@ summary ul {
 .IceCreamSandwich {
     cursor: pointer;
     display: none;
+    z-index: 2;
   }
 
 #blogContent {
@@ -354,12 +358,16 @@ summary ul {
     height: 0;
     width: 100vw;
     overflow: hidden;
-    z-index: 1;
+    z-index: 2;
     background:rgba(84, 11, 14, 0.7);
     backdrop-filter: blur(15px);
     padding:0;
     margin-top: 0;
-    transition: 0.3s;
+    transition: 0.5s;
+    border-radius: 15px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom: 2px solid black;
 }
 #collapseNav li {
     width:75%;
@@ -379,7 +387,30 @@ summary ul {
     justify-self: center;
 }
 
-@media only screen and (max-width: 600px){
+#quote {
+    box-sizing: border-box;
+    width: 60%;
+    margin: auto;
+    background: #ebebeb;
+    font-size: 1.5vw;
+    padding: 0.5em;
+    text-align: center;
+    border-radius: 20px;
+    border: 0.3em solid #540B0E;
+    overflow: hidden;
+}
+#source {
+    width: 50%;
+    margin: auto;
+    font-size:1.2vw;
+    text-align: center;
+    background: #2a4d14;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom: 0.1em solid #540B0E;
+}
+
+@media only screen and (max-width: 800px){
     header {
         grid-template-columns: 70% 30%;
     }
@@ -429,7 +460,7 @@ summary ul {
     }
 
     #check:checked ~ ul#collapseNav{
-        height: 100vh;
+        height: 14em;
 
     }
     footer.container {
@@ -442,5 +473,85 @@ summary ul {
     }
     .externalLink p {
         font-size: 3vw;
+    }
+
+    .portItem1 {
+        grid-template-rows: 35% 65%;
+        grid-template-columns: 100%;
+        height: auto;
+        padding: 0.4em;
+    }
+    .portItem2 {
+        grid-template-rows: 65% 35%;
+        grid-template-columns: 100%;
+        height:auto;
+        padding-bottom: 2.4em;
+    }
+    .projPic {
+        width: 95%;
+        margin: auto;
+        margin-bottom: 0;
+        justify-self: center;
+        z-index: 1;
+    }
+    .projDescription {
+        width: 85%;
+        justify-self: center;
+        padding-top: 2em;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+        z-index: 0;
+    }
+    .projDescription h2 {
+        font-size: 5vw;
+        margin-top: 0.5em;
+    }
+    .projDescription p{
+        font-size: 3.5vw;
+        width: 80%;
+        margin: auto;
+    }
+
+    .portItem2 .projPic {
+        width: 95%;
+        margin: auto;
+        margin-top: 0;
+        justify-self: center;
+    }
+    .portItem2 .projDescription {
+        margin-bottom: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+    }
+
+    .bPreview {
+        width: 85%;
+
+    }
+    .blogTitle {
+        height: 8em;
+    }
+    .blogTitle h4{
+        font-size: 4vw;
+        height: auto;
+        text-align: center;
+    }
+    .blogEntry {
+        height: 0;
+        overflow: hidden;
+        font-size: 5vw;
+    }
+    .blogEntry p {
+        font-size: 3.5vw;
+    }
+    .blogEntry h5 {
+        font-size: 4vw;
+    }
+    summary ul li {
+        font-size: 3.5vw;
+    }
+    .open {
+        height:auto;
+        transition: 0.4;
     }
 }

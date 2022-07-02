@@ -1,3 +1,10 @@
+var openBlog;
+
 function Collapse(elementID) {
-  document.getElementById(elementID).classList.toggle("open");
+  if(openBlog != null || openBlog == document.getElementById(elementID)){
+    openBlog.classList.toggle("open");
+    return;
+  }
+  openBlog = document.getElementById(elementID)
+  openBlog.classList.toggle("open");
 }
