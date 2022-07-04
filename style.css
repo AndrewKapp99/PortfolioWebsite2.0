@@ -12,7 +12,7 @@ body {
 header {
     display:grid;
     grid-template-columns: 30% 70%;
-    height: 10vh;
+    height: 15vh;
     background: #172a3a;
     border-top: 1px solid;
     position: sticky;
@@ -242,6 +242,7 @@ summary ul {
     display: grid;
     grid-template-columns: 90% 10%;
     background: white;
+    z-index: 1;
 }
 
 .blogTitle button {
@@ -347,6 +348,7 @@ summary ul {
     border-radius: 10px;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
+    height: 60%;
 }
 
 #active{
@@ -425,8 +427,13 @@ a.refLink {
         grid-template-columns: 70% 30%;
     }
     #title {
-        width: 90%;
+        width: 70%;
+        height:60%;
         font-size: 5vw;
+        text-align: center;
+        text-justify: center;
+        padding:auto;
+        margin:auto;
     }
     nav.container {
         flex-direction: column;
@@ -442,7 +449,7 @@ a.refLink {
     nav a.content {
         display: none;
     }
-    main.container {
+    section.container {
         flex-direction: column;
     }
     figure.content {
@@ -536,7 +543,7 @@ a.refLink {
 
     .bPreview {
         width: 85%;
-
+        z-index: 1;
     }
     .blogTitle {
         height: 8em;
