@@ -1,8 +1,13 @@
+:root {
+    --backgroundImage: url(images/defaultBacking.jpg);
+}
+
 body {
     border: 1px solid transparent;
-    background:#7c7A7A;
+    background-image: var(--backgroundImage);
     margin: 0px;
     position: relative;
+    display: block;
 }
 header {
     display:grid;
@@ -15,9 +20,7 @@ header {
     z-index: 2;
 }
 
-main {
-    background-color: #a0a0a0;
-}
+
 
 footer{
     position: relative;
@@ -293,6 +296,8 @@ summary ul {
     border-bottom-right-radius: 10px;
 }
 
+
+
 .bPreview a {
     margin: 2em;
     align-self: right;
@@ -409,6 +414,11 @@ summary ul {
     border-bottom-right-radius: 8px;
     border-bottom: 0.1em solid #540B0E;
 }
+
+a.refLink {
+    margin: 0;
+}
+
 
 @media only screen and (max-width: 800px){
     header {

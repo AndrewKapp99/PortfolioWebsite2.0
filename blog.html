@@ -1033,6 +1033,174 @@
           </p>
         </summary>
       </section>
+      <section class="content bPreview">
+        <header class="blogTitle">
+          <h4>NASA Pictures and API's</h4>
+          <button onclick="Collapse('api')">+</button>
+        </header>
+        <summary id="api" class="blogEntry e-content">
+          <p>
+            Finding suitable APIs for my site proved quite difficult, however
+            implementing the ones that I have found proved equally if not more
+            challenging
+          </p>
+          <h5 class="inBlog">Finding an API</h5>
+          <h6>Textillate.js</h6>
+          <p>
+            Starting with the main issue: Finding an API that I can use to
+            enhance my site and make it stand out and feel more dynamic and
+            responsive to certain conditions. My first idea was to implement a
+            quote system similar to André's early javascript lecture and then
+            use a library to animate the quotes changing in and out. This seemed
+            a simple task at first since the library I wanted to use (
+            <a class="refLink" href="https://textillate.js.org/" target="_blank"
+              >textillate.js</a
+            >
+            ) sold itself as a plug-and-play plugin, where a single line of code
+            and some CSS-like property handling would animate the object you
+            want. More on the implementation problems later.<br />
+            The quote system is meant to show some of my favourite quotes from
+            some of my favourite games from Rost's inspiring words to Aloy, to
+            gimmicky quotes like Lance Reddick's far too perfect "Indeed". This
+            is meant to show more about myself through the quotes I have
+            selected. Over time I will expand the quotes library and have more
+            to show. <br />
+            The idea behind animating the text was to have an almost slot
+            machine-like movement so it looked like when they were being swapped
+            they were on a rotating cylinder and it was simply rotating to
+            another face.
+          </p>
+          <h6>NASA Astrology Picture of the Day (APOD)</h6>
+          <p>
+            After a desperate search for another library since I decided
+            textillate was not going to be enough, I found that NASA has a
+            collection of public APIs. My thought process was swift after that
+            since who doesn't want to have some kind of NASA integration in
+            their personal website? <br />
+            Most of the APIs are data outlets regarding various solar bodies,
+            however, at the very top, I found the
+            <a
+              class="refLink"
+              href="https://github.com/nasa/apod-api"
+              target="_blank"
+              >APOD library</a
+            >. This library is a simple library that gives access to the image
+            that NASA has published on any given day to the present. And I
+            thought that having this access would be able to keep the site fresh
+            since every day would have a new background. <br />
+            This library also opens the door to using more libraries, such as
+            <a
+              class="refLink"
+              href="http://colormind.io/api-access/"
+              target="_blank"
+              >Colormind</a
+            >, which is able to suggest a colour palette based on an image
+            input. This will aid the site's ability to look good on various days
+            without colour mashing or colours being too similar. Some colours
+            such as the ivory text spaces will have to stay the same but the
+            more decorative colours can be swapped out and replaced in a similar
+            fashion to the background image, using CSS variables and JavaScript
+            queries. <br />
+            The initial purpose of this library was to be used to generate
+            profile images for the blogs, these images would be randomly
+            generated and used to decorate the site a little bit since the
+            previous background was a no-go. I then decided to simply make the
+            image the background of the site to avoid any unnecessary headaches.
+          </p>
+          <h5 class="inBlog">More Technically...</h5>
+          <p>
+            Both of these libraries presented me with their fair share of
+            challenges but not by how theyre designed but the ways in which I
+            wanted to use them.
+          </p>
+          <h6>Textillated Nightmare</h6>
+          <p>
+            Textillate presents itself in a very easy to use light, with a great
+            demo page as linked above and half-decent documentation. This
+            library has two important dependencies,
+            <a class="refLink" href="https://letteringjs.com/" target="_blank"
+              >lettering.js</a
+            >
+            and a
+            <a class="refLink" href="https://animate.style/" target="_blank"
+              >animate.css</a
+            >. Between these two extra libraries Textillate works its so-called
+            magic. Lettering.js splits the referenced HTML container into words
+            or letters, and animate.css is used to animate the split containers.
+            Textillate first splits the container using lettering then manages
+            the following animations timing and type from there. <br />
+            The perfect implementation works by switching between active and
+            deactive HTML containers, and thus it is a matter of getting the
+            event that activating the container generates to call the animation
+            and then call the function that changes the container when the
+            animation is complete. However, my implementation is far from the
+            ideal implementation, most of the Javascript pertaining to the quote
+            system was already in place and migrating the quotes would be far
+            too much effort for now and in the future since it would include
+            creating a container for every quote I choose to include, this would
+            also take computing time as each container of what could be hundreds
+            at some point would have to all be converted to suit the
+            lettering.js parameters. <br />
+            In Light of this, I chose to try and use events and callbacks to my
+            advantage to work around this problem. However, each attempt either
+            caused a JavaScript error or caused the code to simply not run and
+            thus change nothing, leaving the lorem filler text behind. <br />
+            So while I trid to fix the problem, it was causing more issues than
+            I decided it was truly worth. And so I got the animation to work for
+            the first quote to come in and set out to look for another API that
+            may be easier and more interesting to use.
+          </p>
+          <h6>Astronomical Debugging Adventures</h6>
+          <p>
+            The APOD API seemed like a fantastic idea on paper until I realized
+            that JavaScript and CSS communicate differently to how I thought
+            they did. Needless to say, if I had understood how the CSS method
+            "url()" truly worked I could have save a lot of time and could have
+            worked on getting the rest of the site and this module up to true
+            standard. <br />
+            APOD uses a GET method for the request. Thus, the module must
+            include a request that needs to be loaded. A precaution I took here
+            is that the request may not be fulfilled for multiple reasons either
+            server side with the API or on my side with the date or API Key
+            developing some kind of issue, and I included a default image that
+            matches the theme of most images generated by the API this way the
+            user will not have a jarring white background until the error is
+            resolved. <br />
+            However, despite having this module working in the method I want it
+            to, it is still far from perfect. I possibly need to give the
+            background its own HTML container so that I have control over the
+            image's size and can prevent it from repeating since each image will
+            most likely have different reolutions and sizes. <br />
+            Unfortunately, sice the image generation is reliant on the API,
+            there is little control over the file size of the image as well. I
+            may have to look for an API that serves a similar purpose to TinyJPG
+            to keep load times and request time low. <br />
+            With each picture possibly being completely different from one
+            another, some images may cause assessibilty issue similar to my
+            previous build of the site where the background simply overwhelmed
+            the user's page. Unfortunate there is no way to my knowledge to
+            control this and may have to make a decision whether this API should
+            stay or not.
+          </p>
+          <h5 class="inBlog">Conclusion</h5>
+          <p>
+            APIs are incredibly useful simply because they can potentially
+            significantly cut down on development time, since the structures are
+            in place and it is now a matter of using them. <br />
+            While the APIs I chose to use are very simple in nature and
+            admittedly not 100% working, I feel I have learnt from using them
+            and I can expand my javascript knowledge and my knowledge of other
+            APIs to build new sites or expand on this one with things like the
+            color palette generator and then improving on the APOD
+            implementation. <br />
+            Overall, I am happy with the work I managed to squeeze out in the
+            limited and challenging time I had for this assignment, given my
+            very little experience with including APIs and the work of others
+            into my projects. Many things were learnt and I feel I have a good
+            foundation to continue building on my knowledge of web development.
+          </p>
+        </summary>
+      </section>
     </main>
     <footer class="container footer">
       <a
