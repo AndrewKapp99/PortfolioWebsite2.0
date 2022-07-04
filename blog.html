@@ -1061,7 +1061,32 @@
             somehow. But it is done. I wish I had time to get the weird middle
             ground between the verticle cell phone and the small laptop
             resolution done as well, however I decided that I should design for
-            the greatest portion of users first, being PC and Cell phone
+            the greatest portion of users first, being PC and Cell phone. <br />
+            Next came finding and using APIs, my first plan was to use something
+            generic that almost every site can use. To this end I chose to use a
+            text animation library called Textillate. I thought I could use it
+            with the changing quotes but changing the HTML undid the work of the
+            lettering.js library on which textillate relies and then the
+            animation library that it uses also breaks. And so I had to settle
+            for the first quote to be animated into the site but never again.
+            <br />
+            With the failure of the textillate library I decided to look for
+            another library that could be a little bit more interesting. This
+            lead me to use one of NASA's many APIs for a daily updated
+            background, similar to the windows lock screen. <br />
+            This library seemed extremely simple on the surface: get the image,
+            use the image. However I made some stupid mistakes due to my
+            understanding(or lack thereof) of how JavaScript and CSS
+            communicate. The url() function made the most hassle as a result
+            since I overcomplicated the process of parsing the url into the CSS
+            variable. Turns out its a simple string that goes in the setProperty
+            method. <br />
+            And so, to close off, while there are a good number of problems with
+            the APIs and CSS took too long to get finished. I have learnt a
+            great deal from this build and I have found that my weakness lies in
+            my ability to explore and to keep things simple. Too often have I
+            overcomplicated things that has taken fr too much time away from the
+            rest of the long list of tasks for the build.
           </p>
         </summary>
       </section>
